@@ -5,7 +5,6 @@ import pe.edu.upc.managewise.backend.members.domain.model.commands.CreateMemberC
 import pe.edu.upc.managewise.backend.members.domain.model.commands.DeleteMemberCommand;
 import pe.edu.upc.managewise.backend.members.domain.model.commands.UpdateMemberCommand;
 
-
 import java.util.List;
 import java.util.Optional;
 
@@ -13,7 +12,4 @@ public interface MemberCommandService {
     Long handle(CreateMemberCommand command);
     Optional<Member> handle(UpdateMemberCommand command);
     void handle(DeleteMemberCommand command);
-    Member getMemberById(Long id);
-    List<Member> getAllMembers(); // Método para obtener todos los miembros
-
 }

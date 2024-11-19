@@ -1,4 +1,14 @@
-// 📁 pe/edu/upc/managewise/managewise_members/members/domain/model/valueobjects/EmailAddress.java
 package pe.edu.upc.managewise.backend.members.domain.model.valueobjects;
 
-public record EmailAddress(String email) {}
+import jakarta.persistence.Embeddable;
+@Embeddable
+public record EmailAddress(String email) {
+    public EmailAddress() {
+        this(null);
+    }
+    public EmailAddress {
+        if (email == null || email.isBlank()) {
+            throw new IllegalArgumentException("Email cannot be null or blank");
+        }
+    }
+}
