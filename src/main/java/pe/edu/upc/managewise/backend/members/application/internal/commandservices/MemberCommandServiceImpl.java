@@ -73,16 +73,4 @@ public class MemberCommandServiceImpl implements MemberCommandService {
             throw new IllegalArgumentException("Error while deleting member: " + e.getMessage());
         }
     }
-
-    /*
-    @Override
-    public Optional<Member> fetchMemberById(Long id) {
-        Optional<Member> member = memberRepository.findById(id);
-        if (member.isPresent()) {
-            return member;
-        } else {
-            System.out.println("Member not found with ID: " + id); // Imprime el mensaje en la consola
-            return Optional.empty();
-        }
-    }*/
 }
